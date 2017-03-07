@@ -1,3 +1,6 @@
+/**
+ * Factory used to communicate with the Uber API
+ */
 (function () {
     "use strict";
 

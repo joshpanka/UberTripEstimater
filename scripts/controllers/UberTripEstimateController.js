@@ -1,3 +1,7 @@
+/**
+ * Controller used as middle layer between the home.html view and
+ * the Uber/Map services
+ */
 (function() {
     "use strict";
 

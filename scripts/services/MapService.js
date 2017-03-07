@@ -1,3 +1,6 @@
+/**
+ * Factory used to communicate with the Google Maps API
+ */
 (function () {
     "use strict";
 

@@ -1,3 +1,6 @@
+/**
+ * Filter used estimate ETA given a duration in seconds
+ */
 (function () {
     "use strict";
 

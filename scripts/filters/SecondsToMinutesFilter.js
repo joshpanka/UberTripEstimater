@@ -1,3 +1,6 @@
+/**
+ * Filter used to convert a seconds value to minutes
+ */
 (function () {
     "use strict";
 
