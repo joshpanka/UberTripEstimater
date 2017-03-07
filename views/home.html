@@ -3,7 +3,7 @@
         <form ng-submit="estimater.submit()">
             <input type="text" placeholder="Pickup Location" name="startAddress" ng-model="estimater.startAddress" ng-change="estimater.clearProducts()" required>
             <div ng-if="estimater.products.length > 0">
-                <input type="text" placeholder="Pickup Location" name="endAddress" ng-model="estimater.endAddress" required>
+                <input type="text" placeholder="Dropoff Location" name="endAddress" ng-model="estimater.endAddress" required>
                 <div class="row">
                     <fieldset class="large-12 columns">
                         <input ng-repeat-start="product in estimater.products track by $index" type="radio" name="rideType" value="{{product.product_id}}" ng-model="estimater.rideType" required>
@@ -35,5 +35,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>
