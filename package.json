@@ -1,0 +1,15 @@
+{
+  "name": "basic-api-interaction",
+  "version": "0.0.1",
+  "description": "Project to interface with api in a fun way",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josh Panka",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0"
+  }
+}

@@ -1,0 +1,35 @@
+/*
+ * Custom styling for home.html
+ */
+body {
+    font-family: 'ABeeZee', sans-serif;
+}
+
+/**
+ * Needed for Google Maps API
+ * to load properly
+ */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.product-block {
+    position: relative;
+    top: -395px;
+    left:  20px;
+    min-width: 198px;
+    background: white ;
+    text-align: center;
+    border: thin solid black;
+    border-radius: 2px;
+    box-shadow: 1px 1px;
+}
+
+.product-trip-duration-label {
+    font-weight: bold;
+}
+
+.product-trip-duration {
+    border-right: thin solid black;
+}

@@ -1,0 +1,57 @@
+<div class="row" data-ng-controller="UberTripEstimateController as estimater">
+    <div class="large-12 columns">
+        <form ng-submit="estimater.submit()">
+            <input type="text"
+                    placeholder="Pickup Location"
+                    name="startAddress"
+                    ng-model="estimater.startAddress"
+                    ng-change="estimater.clearProducts()"
+                    required>
+            <div ng-if="estimater.products.length > 0">
+                <input type="text"
+                        placeholder="Pickup Location"
+                        name="endAddress"
+                        ng-model="estimater.endAddress"
+                        required>
+                <div class="row">
+                    <fieldset class="large-12 columns">
+                        <input ng-repeat-start="product in estimater.products track by $index"        type="radio" name="rideType"
+                                value="{{product.product_id}}"
+                                ng-model="estimater.rideType" required>
+                        <label ng-repeat-end for="rideType">
+                        {{product.display_name}}
+                        - {{product.estimate | secondsToMinutes }}
+                        min
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+            <button class="button"
+                    type="submit"
+                    name="submit">Submit</button>
+        </form>
+        <div id="map"></div>
+        <div ng-if="estimater.priceEstimates.length > 0" class="price-estimates row"
+            ng-repeat="price in estimater.priceEstimates track by $index">
+            <div class="small-2 columns product-block"
+                ng-if="estimater.rideType === price.product_id">
+                <div class="row">
+                    <div class="small-5 columns product-trip-duration">
+                        <div class="product-trip-duration-label">
+                            ETA
+                        </div>
+                        {{ price.duration | durationToETA | date:'HH:mm' }}
+                    </div>
+                    <div class="small-7 columns"
+                        <div class="product-name">
+                            {{ price.display_name }}
+                        </div>
+                        <div class="product-price">
+                            {{ price.estimate }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

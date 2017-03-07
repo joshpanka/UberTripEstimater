@@ -1,0 +1,24 @@
+/*
+ * Custom styling for html not in a view
+ */
+
+.top-bar {
+    margin-bottom: 5px;
+}
+
+.bottom-bar{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.content {
+    vertical-align: center;
+}
+
+.bottom-bar-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+}

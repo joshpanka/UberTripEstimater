@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="uberTripEstimater">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API Interaction</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="/styles/3rdparty/foundation.min.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <base href="/">
+</head>
+
+<body>
+
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">UberTripEstimater</li>
+          <li>
+            <a href="/">App</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+        <div ng-view></div>
+    </div>
+
+    <div class="top-bar bottom-bar">
+      <div class="bottom-bar-wrapper">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li>MIT License</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="/scripts/3rdparty/angular.min.js"></script>
+    <script src="/scripts/3rdparty/angular-route.min.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_MAPS_API_KEY">
+    </script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/UberTripEstimateController.js"></script>
+    <script src="/scripts/services/UberService.js"></script>
+    <script src="/scripts/services/MapService.js"></script>
+    <script src="/scripts/filters/SecondsToMinutesFilter.js"></script>
+    <script src="/scripts/filters/DurationToETAFilter.js"></script>
+</body>
+</html>
