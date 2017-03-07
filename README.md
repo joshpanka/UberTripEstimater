@@ -1,4 +1,7 @@
-# UberAPIApp
+# UberTripEstimater
+
+## Purpose
+The idea behind the UberTripEstimater is to take in a start address, end address and uber type in order to present the user with an accurate ETA and cost estimate for the potential trip.
 
 ## Setup
 1. Run `npm install`
